@@ -19,7 +19,13 @@ let Average = function(numbers){
     numbers.forEach(number => {
         sum += parseFloat(number);
     });
-    return sum / numbers.length;
+    if (numbers.length == 0){
+        return "Division by zero"
+    }
+    else{
+        return sum / numbers.length;
+    }
+    
 
 };
 let Substract = function(number1, number2){
@@ -62,14 +68,9 @@ let multiply = function(numbers){
     return  minm
 };
 
-
-
-let Square = function(number1){
-
+let Square = function (number1){
     return Math.Square(number1);
-};
-
-
+}
 
  (function (){
 
