@@ -12,7 +12,7 @@ let account1 = {
 
 let account2 = {
     name: "Second Account",
-    currentBalance: 100
+    currentBalance: 200
 }
 
 let accept = function(accountName){
@@ -46,6 +46,7 @@ let transfer = function( account1, account2, amount){
 
     return account1, account2;
 };
+
 let knowBalance = function(account){
     return account.currentBalance;
 };
