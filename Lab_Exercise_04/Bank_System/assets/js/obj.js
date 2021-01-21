@@ -41,8 +41,9 @@ let deposit = function(currentBalance, amount){
 };
 
 let transfer = function( account1, account2, amount){
-    account1.currentBalance = account1.currentBalance - parseInt(amount);
-    account2.currentBalance = account2.currentBalance + parseInt(amount);
+    account1.currentBalance = account1.currentBalance - parseFloat(amount);
+    account2.currentBalance = account2.currentBalance + parseFloat(amount);
+    
 
     return account1, account2;
 };
@@ -60,14 +61,14 @@ let knowBalance = function(account){
         account = accept(input);
         amount = prompt("Enter amount: ")
         account.currentBalance = withdrawal(account.currentBalance, amount);
-        console.log("Your balance is " + account.currentBalance)
+        console.log("Your Current balance is " + account.currentBalance)
     }
     else if(option == 2){
         input = prompt("Account names \n 1,First Account \n 2, Second Account \n Enter account name: ");
         account = accept(input);
         amount = prompt("Enter amount: ")
         account.currentBalance = deposit(account.currentBalance, amount);
-        console.log("Your balance is " + account.currentBalance)
+        console.log("Your Current balance is " + account.currentBalance)
     }
     else if(option == 3){
         input = prompt("Account names \n 1,First Account \n 2, Second Account \n Enter account name: ");
@@ -83,7 +84,7 @@ let knowBalance = function(account){
     else if(option == 4){
         input = prompt("Account names \n 1,First Account \n 2,Second Account \n Enter account name: ");
         account = accept(input);
-        console.log("Your balance is" + account.balance);
+        console.log("Your Current balance is" + account.balance);
     }
     else{
         console.log("Invalid Input!");

@@ -13,6 +13,15 @@ let add = function(numbers){
     });
     return sum
 };
+let Average = function(numbers){
+    let sum;
+    sum = 0;
+    numbers.forEach(number => {
+        sum += parseFloat(number);
+    });
+    return sum / numbers.length;
+
+};
 let Substract = function(number1, number2){
     return number1 - number2
 };
@@ -53,15 +62,7 @@ let multiply = function(numbers){
     return  minm
 };
 
-let Average = function(numbers){
-    let sum;
-    sum = 0;
-    numbers.forEach(number => {
-        sum += parseFloat(number);
-    });
-    return sum / numbers.length;
 
-};
 
 let Square = function(number1){
 
@@ -130,7 +131,7 @@ let Square = function(number1){
         console.log(answer);
     }
     else if (option == 8){
-        let choice = prompt("Number to make it square");
+        choice = prompt("Number to make it square");
        
         answer = Square(numbers);
         console.log(answer);
